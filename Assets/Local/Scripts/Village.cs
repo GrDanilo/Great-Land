@@ -4,13 +4,25 @@ using UnityEngine;
 
 public class Village : MonoBehaviour
 {
-    public int MyTeam;
+    [SerializeField] private GameObject CaptureButton;
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
+        if(other.CompareTag("City"))
+        {
+            Destroy(gameObject);
+        }
+
         if(other.CompareTag("Player"))
         {
-
+            CaptureButton.SetActive(true);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other) 
+    {
+        if(other.CompareTag("Player"))
+        {
+            CaptureButton.SetActive(false);
         }
     }
 }
