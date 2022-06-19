@@ -14,25 +14,30 @@ public class ManageGame : MonoBehaviour
     {
         WorldPos = GameObject.FindGameObjectsWithTag("Земля");
         int rand = Random.Range(0, WorldPos.Length);
+        NowTribe = Tribes.Count;
+        if(NowTribe > 0)
+        {
+            Tribes[NowTribe - 1].SetActive(false);
+        }
         Instantiate(TribeObjects[TribeID], WorldPos[rand].transform.position, WorldPos[rand].transform.rotation);
         Instantiate(City[TribeID], WorldPos[rand].transform.position, WorldPos[rand].transform.rotation);
-        NowTribe += 1;
-        Tribes.Add(TribeObjects[NowTribe]);
+        GameObject New = GameObject.FindWithTag("GameController");
+        Tribes.Add(New);
     }
 
     public void NextTribe()
     {
-        if(NowTribe <= Tribes.Count)
+        if(NowTribe < Tribes.Count)
         {
-            Tribes[NowTribe].SetActive(false);
+            Tribes[NowTribe - 1].SetActive(false);
             NowTribe += 1;
-            Tribes[NowTribe].SetActive(true);
+            Tribes[NowTribe - 1].SetActive(true);
         }
         else
         {
-            Tribes[NowTribe].SetActive(false);
-            NowTribe = 0;
-            Tribes[NowTribe].SetActive(true);
+            Tribes[NowTribe - 1].SetActive(false);
+            NowTribe = 1;
+            Tribes[NowTribe - 1].SetActive(true);
         }
     }
 }

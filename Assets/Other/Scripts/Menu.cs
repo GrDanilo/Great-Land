@@ -7,6 +7,14 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] private float Coins;
 
+    private void FixedUpdate() 
+    {
+        //if(Input.GetKeyDown(KeyCode.escape))
+        //{
+        //    Application.Quit();
+        //}
+    }
+
     public void LoadLocalGame()
     {
         SceneManager.LoadScene("Local game");
