@@ -21,7 +21,7 @@ public class CameraController : MonoBehaviour
         {
             float posX = camera.ScreenToWorldPoint(Input.mousePosition).x - startPos.x;
             float posY = camera.ScreenToWorldPoint(Input.mousePosition).y - startPos.y;
-            transform.position = new Vector3(transform.position.x - posX, transform.position.y - posY, transform.position.z);
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x - posX, -15, 15), Mathf.Clamp(transform.position.y - posY, -15, 15), transform.position.z);
         }
 
         fill = slider.value;

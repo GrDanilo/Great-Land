@@ -15,6 +15,10 @@ public class Tribe : MonoBehaviour
 
     [Header("Племя")]
     [SerializeField] private MyTribe myTribe;
+
+    [Header("Города")]
+    private List<GameObject> Citys;
+
     private enum MyTribe
     {
         Империя,

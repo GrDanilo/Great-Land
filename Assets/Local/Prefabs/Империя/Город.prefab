@@ -1511,7 +1511,7 @@ GameObject:
   - component: {fileID: 4233661491631973657}
   m_Layer: 0
   m_Name: "\u0413\u043E\u0440\u043E\u0434"
-  m_TagString: Untagged
+  m_TagString: City
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1546,6 +1546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba32956f8d96fc42ad9174c2c3b69e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MyPosition: {fileID: 8334940265166812076}
 --- !u!212 &4233661491631973657
 SpriteRenderer:
   m_ObjectHideFlags: 0
