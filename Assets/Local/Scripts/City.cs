@@ -8,21 +8,23 @@ public class City : MonoBehaviour
     private float UnitCost;
     private Tribe TribeScript;
 
+    private void Start() 
+    {
+        GameObject tribe = GameObject.FindWithTag("GameController");
+        TribeScript = tribe.GetComponent("Tribe") as Tribe;
+    }
+
     public void UnitsDonate(float Cost)
     {
         UnitCost = Cost;
-        Debug.Log("Цена установлена");
     }
     public void SpawnUnit(GameObject Unit)
     {
-        Debug.Log("Проверка на деньги");
         if(TribeScript.Деньги >= UnitCost)
         {
-            Debug.Log("Спавн юнита");
             Instantiate(Unit, MyPosition.position, MyPosition.rotation);
-            Debug.Log("Юнит заспавнен");
             TribeScript.Деньги -= UnitCost;
-            Debug.Log("Деньги отобраны");
+            TribeScript.Synchronization();
         }
     }
 }

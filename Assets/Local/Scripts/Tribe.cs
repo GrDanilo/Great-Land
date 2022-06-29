@@ -25,6 +25,11 @@ public class Tribe : MonoBehaviour
         СОС
     }
 
+    private void Start() 
+    {
+        Synchronization();
+    }
+
     public void Synchronization()
     {
         ТекстДенег.text = ": " + Деньги;

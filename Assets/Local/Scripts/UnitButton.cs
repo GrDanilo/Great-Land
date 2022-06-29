@@ -111,6 +111,10 @@ public class UnitButton : MonoBehaviour
             {
                 ThisButton.SetActive(true);
             }
+            else
+            {
+                ThisButton.SetActive(false);
+            }
         }
     }
 

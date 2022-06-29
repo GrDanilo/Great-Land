@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
+    public int MyTeam;
+
     [Header("Статы")]
     [SerializeField] private float MyHealth;
     private float Health;
     [SerializeField] private float MyDamage;
     private float Damage;
-    [SerializeField] private float Myprotection;
+    [SerializeField] private float MyProtection;
     private float protection;
     [SerializeField] private float MySpeed;
 
