@@ -574,8 +574,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 512887904}
+  ObjectSlider: {fileID: 72415864}
   slider: {fileID: 72415866}
-  fill: 0
+  Type: 1
 --- !u!1 &521722529
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ TagManager:
   - "\u0413\u043E\u0440\u044B"
   - "\u041F\u0443\u0441\u0442\u043E\u0442\u0430"
   - City
+  - TribeObject
   layers:
   - Default
   - TransparentFX

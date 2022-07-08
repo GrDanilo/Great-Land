@@ -6,10 +6,26 @@ using UnityEngine.UI;
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private Camera camera;
+    [SerializeField] private GameObject ObjectSlider;
     [SerializeField] private Slider slider;
-    [SerializeField] private float fill;
+    private float fill;
 
     private Vector2 startPos;
+
+    public ControllType Type;
+    public enum ControllType
+    {
+        Сенсор,
+        Компьютер
+    }
+
+    private void Start() 
+    {
+        if(Type == ControllType.Компьютер)
+        {
+            ObjectSlider.SetActive(false);
+        }
+    }
 
     void FixedUpdate()
     {
@@ -24,15 +40,22 @@ public class CameraController : MonoBehaviour
             transform.position = new Vector3(Mathf.Clamp(transform.position.x - posX, -15, 15), Mathf.Clamp(transform.position.y - posY, -15, 15), transform.position.z);
         }
 
-        fill = slider.value;
+        if(Type == ControllType.Сенсор)
+        {
+            fill = slider.value;
 
-        if(fill == 0)
-        {
-            camera.orthographicSize = 0.05f;
+            if(fill == 0)
+            {
+                camera.orthographicSize = 0.05f;
+            }
+            else
+            {
+                camera.orthographicSize = fill * 5;
+            }
         }
-        else
+        else if(Type == ControllType.Компьютер)
         {
-            camera.orthographicSize = fill * 5;
+            camera.orthographicSize = Mathf.Clamp(camera.orthographicSize - Input.GetAxis("Mouse ScrollWheel") * 3, 1, 10);
         }
     }
 }

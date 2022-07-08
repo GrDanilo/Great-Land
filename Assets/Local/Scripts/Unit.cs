@@ -7,17 +7,31 @@ public class Unit : MonoBehaviour
     public int MyTeam;
 
     [Header("Статы")]
-    [SerializeField] private float MyHealth;
-    private float Health;
-    [SerializeField] private float MyDamage;
-    private float Damage;
-    [SerializeField] private float MyProtection;
-    private float protection;
-    [SerializeField] private float MySpeed;
+    [SerializeField] public float MyHealth;
+    [HideInInspector]public float Health;
+    [SerializeField] public float MyDamage;
+    [HideInInspector]public float Damage;
+    [SerializeField] public float MyProtection;
+    [HideInInspector]public float Protection;
+    [SerializeField] public float MySpeed;
 
-    public void Go(Transform GoTo)
+    private void Start() 
     {
-        //transform.position = new Vector3(Mathf.Lerp(transform.position.x, GoTo.position.x, MySpeed * Time.deltaTime), Mathf.Lerp(transform.position.y, GoTo.position.y, MySpeed * Time.deltaTime), transform.position.z);
-        transform.position = GoTo.position;
+        Synchronization();
+    }
+
+    private void FixedUpdate() 
+    {
+        if(Health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void Synchronization()
+    {
+        Health = MyHealth;
+        Damage = MyDamage;
+        Protection = MyProtection;
     }
 }

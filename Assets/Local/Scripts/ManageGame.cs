@@ -6,6 +6,7 @@ public class ManageGame : MonoBehaviour
 {
     [SerializeField] private List<GameObject> Tribes;
     [SerializeField] private int NowTribe;
+    //private Tribe NowTribeScript;
     [SerializeField] private GameObject[] TribeObjects;
     [SerializeField] private GameObject[] City;
     private GameObject[] WorldPos;
@@ -21,6 +22,8 @@ public class ManageGame : MonoBehaviour
         }
         Instantiate(TribeObjects[TribeID], WorldPos[rand].transform.position, WorldPos[rand].transform.rotation);
         Instantiate(City[TribeID], WorldPos[rand].transform.position, WorldPos[rand].transform.rotation);
+        //NowTribeScript = Tribes[NowTribe - 1].GetComponent("Tribe") as Tribe;
+        //NowTribeScript.NextMove();
         GameObject New = GameObject.FindWithTag("GameController");
         Tribes.Add(New);
     }

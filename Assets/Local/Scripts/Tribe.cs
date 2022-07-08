@@ -15,6 +15,7 @@ public class Tribe : MonoBehaviour
 
     [Header("Племя")]
     [SerializeField] private MyTribe myTribe;
+    //[SerializeField] private List<GameObject> MyTribeObjects;
 
     [Header("Города")]
     private List<GameObject> Citys;
@@ -28,6 +29,11 @@ public class Tribe : MonoBehaviour
     private void Start() 
     {
         Synchronization();
+        //GameObject[] New = GameObject.FindGameObjectsWithTag("TribeObject");
+        //for(int i = 0; i < New.Length; i++)
+        //{
+        //    MyTribeObjects.Add(New[i]);
+        //}
     }
 
     public void Synchronization()
@@ -36,4 +42,12 @@ public class Tribe : MonoBehaviour
         ТекстНаселения.text = ": " + Население;
         ТекстЕды.text = ": " + Еда;
     }
+
+    /*public void NextMove()
+    {
+        for(int i = 0; i < MyTribeObjects.Count; i++)
+        {
+            MyTribeObjects[i].SetActive(false);
+        }
+    }*/
 }
