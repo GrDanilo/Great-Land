@@ -1607,7 +1607,7 @@ GameObject:
   - component: {fileID: 159514741758357827}
   m_Layer: 0
   m_Name: "\u0417\u0440\u0435\u043D\u0438\u0435"
-  m_TagString: Untagged
+  m_TagString: TribeObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

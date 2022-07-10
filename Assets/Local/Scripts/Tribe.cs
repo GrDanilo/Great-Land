@@ -15,7 +15,7 @@ public class Tribe : MonoBehaviour
 
     [Header("Племя")]
     [SerializeField] private MyTribe myTribe;
-    //[SerializeField] private List<GameObject> MyTribeObjects;
+    [SerializeField] private List<GameObject> MyTribeObjects;
 
     [Header("Города")]
     private List<GameObject> Citys;
@@ -29,11 +29,11 @@ public class Tribe : MonoBehaviour
     private void Start() 
     {
         Synchronization();
-        //GameObject[] New = GameObject.FindGameObjectsWithTag("TribeObject");
-        //for(int i = 0; i < New.Length; i++)
-        //{
-        //    MyTribeObjects.Add(New[i]);
-        //}
+        GameObject[] New = GameObject.FindGameObjectsWithTag("TribeObject");
+        for(int i = 0; i < New.Length; i++)
+        {
+            MyTribeObjects.Add(New[i]);
+        }
     }
 
     public void Synchronization()
@@ -43,11 +43,29 @@ public class Tribe : MonoBehaviour
         ТекстЕды.text = ": " + Еда;
     }
 
-    /*public void NextMove()
+    public void NextMove()
     {
+        GameObject[] New = GameObject.FindGameObjectsWithTag("TribeObject");
+        for(int i = 0; i < New.Length; i++)
+        {
+            MyTribeObjects.Add(New[i]);
+        }
         for(int i = 0; i < MyTribeObjects.Count; i++)
         {
             MyTribeObjects[i].SetActive(false);
         }
-    }*/
+        gameObject.SetActive(false);
+    }
+    public void NewMove()
+    {
+        GameObject[] New = GameObject.FindGameObjectsWithTag("TribeObject");
+        for(int i = 0; i < New.Length; i++)
+        {
+            MyTribeObjects.Add(New[i]);
+        }
+        for(int i = 0; i < MyTribeObjects.Count; i++)
+        {
+            MyTribeObjects[i].SetActive(true);
+        }
+    }
 }
