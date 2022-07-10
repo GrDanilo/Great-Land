@@ -65,7 +65,10 @@ public class Tribe : MonoBehaviour
         }
         for(int i = 0; i < MyTribeObjects.Count; i++)
         {
-            MyTribeObjects[i].SetActive(true);
+            if(MyTribeObjects[i] != null)
+            {
+                MyTribeObjects[i].SetActive(true);
+            }
         }
     }
 }
