@@ -18,7 +18,7 @@ public class Tribe : MonoBehaviour
     [SerializeField] private List<GameObject> MyTribeObjects;
 
     [Header("Города")]
-    private List<GameObject> Citys;
+    public List<GameObject> Citys;
 
     private enum MyTribe
     {
@@ -70,5 +70,16 @@ public class Tribe : MonoBehaviour
                 MyTribeObjects[i].SetActive(true);
             }
         }
+        for(int i = 0; i < Citys.Count; i++)
+        {
+            AddCoins(1, 0);
+        }
+        Synchronization();
+    }
+
+    private void AddCoins(float Bonus, float HowAdd)
+    {
+        HowAdd = Mathf.Round(1 * Bonus);
+        Деньги += HowAdd;
     }
 }

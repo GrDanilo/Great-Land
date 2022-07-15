@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 124306250003255425}
   - component: {fileID: 5045954467378973017}
+  - component: {fileID: -9093013603144554025}
   - component: {fileID: 5776957802587423710}
   - component: {fileID: 7611397417481688619}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: "\u041B\u0435\u0441"
   m_TagString: "\u041B\u0435\u0441"
   m_Icon: {fileID: 0}
@@ -86,6 +87,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-9093013603144554025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9104769164456646795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c1fc8f5fd9858478a68653a927f2da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IcanSpawnVillage: 0
+  "\u0414\u0435\u0440\u0435\u0432\u043D\u044F": {fileID: 4365391936355735611, guid: 2b060ebd709e814488c072fd5c83f4e2, type: 3}
+  PanelsLayer:
+    serializedVersion: 2
+    m_Bits: 1536
+  MyRange: {x: 6.75, y: 6.75}
 --- !u!61 &5776957802587423710
 BoxCollider2D:
   m_ObjectHideFlags: 0

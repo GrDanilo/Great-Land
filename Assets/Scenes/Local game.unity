@@ -229,7 +229,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &96880013
 MonoBehaviour:
@@ -654,7 +654,7 @@ MonoBehaviour:
   camera: {fileID: 512887904}
   ObjectSlider: {fileID: 72415864}
   slider: {fileID: 72415866}
-  Type: 1
+  Type: 0
 --- !u!1 &521722529
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,7 +851,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &637503204
 Transform:
@@ -1673,7 +1673,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 0
 --- !u!4 &1389147624
 Transform:
@@ -2390,12 +2390,12 @@ GameObject:
   - component: {fileID: 1770495467}
   - component: {fileID: 1770495466}
   - component: {fileID: 1770495470}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: "\u041F\u0443\u0441\u0442\u043E\u0442\u0430"
   m_TagString: "\u041F\u0443\u0441\u0442\u043E\u0442\u0430"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1770495465
 Transform:

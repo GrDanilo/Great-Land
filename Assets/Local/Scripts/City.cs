@@ -12,6 +12,7 @@ public class City : MonoBehaviour
     {
         GameObject tribe = GameObject.FindWithTag("GameController");
         TribeScript = tribe.GetComponent("Tribe") as Tribe;
+        TribeScript.Citys.Add(gameObject);
     }
 
     public void UnitsDonate(float Cost)

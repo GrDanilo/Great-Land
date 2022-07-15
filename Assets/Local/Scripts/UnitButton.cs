@@ -34,11 +34,14 @@ public class UnitButton : MonoBehaviour //Пипец какой-то, а не с
         MyUnitScript.Damage = MyUnitScript.MyDamage * (MyUnitScript.Health / MyUnitScript.MyHealth);
         MyUnitScript.Damage = Mathf.Round(MyUnitScript.Damage);
         MyUnitScript.Damage = Mathf.Clamp(MyUnitScript.Damage, 0, 99);
-        UnitScript.Health -= MyUnitScript.Damage; Debug.Log("Урон = " + MyUnitScript.Damage);
+        UnitScript.Health -= MyUnitScript.Damage;
 
-        UnitScript.Damage = UnitScript.MyDamage * (((UnitScript.Health / UnitScript.MyHealth) * UnitScript.Protection) - MyUnitScript.Protection);
-        UnitScript.Damage = Mathf.Round(UnitScript.Damage);
-        UnitScript.Damage = Mathf.Clamp(UnitScript.Damage, 0, 99);
+        if(UnitScript.Health > 0)
+        {
+            UnitScript.Damage = UnitScript.MyDamage * (((UnitScript.Health / UnitScript.MyHealth) * UnitScript.Protection) - MyUnitScript.Protection);
+            UnitScript.Damage = Mathf.Round(UnitScript.Damage);
+            UnitScript.Damage = Mathf.Clamp(UnitScript.Damage, 0, 99);
+        }
         if(UnitScript.Health > 0)
         {
             StartCoroutine(AttackCour(GoTo));
@@ -47,7 +50,10 @@ public class UnitButton : MonoBehaviour //Пипец какой-то, а не с
         {
             StartCoroutine(KillCour(GoTo));
         }
-        MyUnitScript.Health -= UnitScript.Damage; Debug.Log("Возврат = " + UnitScript.Damage);
+        if(UnitScript.Health > 0)
+        {
+            MyUnitScript.Health -= UnitScript.Damage;
+        }
     }
     IEnumerator AttackCour(Transform GoTo)
     {

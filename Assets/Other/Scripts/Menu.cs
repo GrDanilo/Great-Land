@@ -9,10 +9,13 @@ public class Menu : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        //if(Input.GetKeyDown(KeyCode.escape))
-        //{
-        //    Application.Quit();
-        //}
+        if (Application.platform == RuntimePlatform.Android) 
+        { 
+            if (Input.GetKeyDown(KeyCode.Escape)) 
+            { 
+                Application.Quit(); 
+            } 
+        } 
     }
 
     public void LoadLocalGame()

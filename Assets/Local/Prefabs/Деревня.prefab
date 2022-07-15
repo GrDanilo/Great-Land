@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5581094012321810874}
   - component: {fileID: 6301914456221435430}
   - component: {fileID: 9009901183022187158}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "\u0414\u0435\u0440\u0435\u0432\u043D\u044F"
   m_TagString: "\u0414\u0435\u0440\u0435\u0432\u043D\u044F"
   m_Icon: {fileID: 0}
@@ -51,6 +51,10 @@ MonoBehaviour:
   CaptureButton: {fileID: 7822966832163583067}
   Citys:
   - {fileID: 8588798278817754741, guid: 055c2a63204c6e04192e03518d15d1bf, type: 3}
+  VillageLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  MyRange: {x: 0.95, y: 0.95}
 --- !u!212 &5581094012321810874
 SpriteRenderer:
   m_ObjectHideFlags: 0
